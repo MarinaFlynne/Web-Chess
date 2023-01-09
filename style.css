@@ -1,0 +1,80 @@
+body {
+  background-color: rgb(36, 36, 36);
+}
+
+.board-container {
+  width: 500px;
+  height: 500px;
+  margin: 10% auto;
+  display: grid;
+  grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+  grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+}
+
+.square {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.square.black {
+  background-color: burlywood;
+}
+
+.square.white {
+  background-color: white;
+}
+
+.piece {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+
+.piece.pawn.white {
+  background-image: url("res/piece-fonts/staunty/pw.svg");
+}
+
+.piece.pawn.black {
+  background-image: url("res/piece-fonts/staunty/pb.svg");
+}
+
+.piece.rook.white {
+  background-image: url("res/piece-fonts/staunty/rw.svg");
+}
+
+.piece.rook.black {
+  background-image: url("res/piece-fonts/staunty/rb.svg");
+}
+
+.piece.knight.white {
+  background-image: url("res/piece-fonts/staunty/nw.svg");
+}
+
+.piece.knight.black {
+  background-image: url("res/piece-fonts/staunty/nb.svg");
+}
+
+.piece.bishop.white {
+  background-image: url("res/piece-fonts/staunty/bw.svg");
+}
+
+.piece.bishop.black {
+  background-image: url("res/piece-fonts/staunty/bb.svg");
+}
+
+.piece.king.white {
+  background-image: url("res/piece-fonts/staunty/kw.svg");
+}
+
+.piece.king.black {
+  background-image: url("res/piece-fonts/staunty/kb.svg");
+}
+
+.piece.queen.white {
+  background-image: url("res/piece-fonts/staunty/qw.svg");
+}
+
+.piece.queen.black {
+  background-image: url("res/piece-fonts/staunty/qb.svg");
+}/*# sourceMappingURL=style.css.map */
