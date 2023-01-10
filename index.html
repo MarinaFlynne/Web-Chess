@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width" />
     <meta name="author" content="Marina Flynne" />
+
+    <script src="main.js" defer></script>
+    <noscript>To use this site, please enable JavaScript.</noscript>
     <!-- <meta name="description" content="TODO" /> -->
 
     <!-- <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
     <title>Web-Chess</title>
 </head>
 <body>
+
     <div class="board-container">
 
         <!-- row 8 -->
@@ -85,14 +89,14 @@
         <div class="square black"><div class="piece pawn white"></div></div>
 
         <!-- row 1 -->
-        <div class="square black"><div class="piece rook white"></div></div>
-        <div class="square white"><div class="piece knight white"></div></div>
-        <div class="square black"><div class="piece bishop white"></div></div>
-        <div class="square white"><div class="piece queen white"></div></div>
-        <div class="square black"><div class="piece king white"></div></div>
-        <div class="square white"><div class="piece bishop white"></div></div>
-        <div class="square black"><div class="piece knight white"></div></div>
-        <div class="square white"><div class="piece rook white"></div></div>
+        <div class="square black" id="a1"><div class="piece rook white" draggable="true"></div></div>
+        <div class="square white" id="a2"><div class="piece knight white"></div></div>
+        <div class="square black" id="a3"><div class="piece bishop white"></div></div>
+        <div class="square white" id="a4"><div class="piece queen white"></div></div>
+        <div class="square black" id="a5"><div class="piece king white"></div></div>
+        <div class="square white" id="a6"><div class="piece bishop white"></div></div>
+        <div class="square black" id="a7"><div class="piece knight white"></div></div>
+        <div class="square white" id="a8"><div class="piece rook white"></div></div>
 
     </div>
 </body>

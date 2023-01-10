@@ -14,16 +14,30 @@ body {
     display: grid;
     grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
     grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+
+    position: relative;
+    // z-index: -1;
 }
+
+
 
 .square {
     display: inline-block;
     width: 100%;
     height: 100%;
+
+    // border: 5px solid green;
 }
+
+
+// piece-hover is added to the square when user is dragging a piece over top of the square
+// .square.piece-hover {
+
+// }
 
 .square.black{
     background-color: burlywood;
+    // border: 1px solid red;
 }
 
 .square.white {
@@ -34,6 +48,11 @@ body {
     width: 100%;
     height: 100%;
     background-size: contain;
+    // background-color: pink;
+}
+
+.piece:hover {
+    opacity: 0.6;
 }
 
 .piece.pawn.white {
