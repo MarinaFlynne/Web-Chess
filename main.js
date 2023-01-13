@@ -15,11 +15,10 @@ squares.forEach(elem => {
 
 
 function dragStart(event) {
+    //store the id of the parent
     event
     .dataTransfer
     .setData('text/plain', event.target.parentNode.id);
-
-    console.log(event.target.id);
 }
 
 function dragOver(event) {
@@ -35,9 +34,6 @@ function drop(event) {
 
     const dropzone = event.target;
 
+    //make the piece of the parent a child of the new square
     dropzone.appendChild(draggableElement.firstChild);
-
-    event
-    .dataTransfer
-    .clearData();
 }
