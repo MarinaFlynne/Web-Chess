@@ -3,7 +3,8 @@
 const pieces = document.querySelectorAll(".piece");
 const squares = document.querySelectorAll(".square");
 
-placePiece("b1", "rook","white");
+const startingLayout = ["w-rook", "w-knight", "w-bishop", "w-queen", "w-king", "w-bishop", "w-knight", "w-rook", "/", "w-pawn", "w-pawn", "w-pawn", "w-pawn", "w-pawn", "w-pawn", "w-pawn", "w-pawn", "/", "/", "/", "/", "/", "b-pawn", "b-pawn", "b-pawn", "b-pawn", "b-pawn", "b-pawn", "b-pawn", "b-pawn", "/", "b-rook", "b-knight", "b-bishop", "b-king", "b-queen", "b-bishop", "b-knight", "b-rook"];
+placePieces(startingLayout);
 
 //ebemt listener for the pieces
 pieces.forEach(elem => {
@@ -53,3 +54,40 @@ function placePiece(position, pieceName, color) {
     const pieceParent = document.getElementById(position);
     pieceParent.appendChild(newPiece);
 }
+
+function columnNumToLetter(number) {
+    const columnLetters = ["a", "b", "c", "d", "e", "f", "g", "h"];
+    return columnLetters[number-1];
+}
+//TODO
+function placePieces(layout) {
+    // let startingLayoutWhite = ["rook", "knight", "bishop", "queen", "king", "bishop", "knight", "rook"];
+    // let startingLayoutBlack = ["rook", "knight", "bishop", "king", "queen", "bishop", "knight", "rook"];
+    let currentIndex = 0;
+    let color = "white";
+    let column = 1;
+    //WHY DOES IT SKIP 2 ROWS??
+    for (let row = 1; row <= 8; row++) {
+        console.log("row = " + row + "column = " + column);
+        if (layout[currentIndex] == "/") {
+            console.log("currentIndex " + currentIndex);
+            currentIndex++;
+        } else {
+            for (column = 1; column <= 8; column++) {
+                const colourPiece = layout[currentIndex].split("-");
+                if (colourPiece[0] == "w") {
+                    color = "white";
+                } else {
+                    color = "black";
+                }
+                let piece = colourPiece[1];
+                console.log(columnNumToLetter(column) + row);
+                placePiece(columnNumToLetter(column) + row, piece, color);
+                currentIndex++;
+            }
+        }
+    }
+
+
+}
+
